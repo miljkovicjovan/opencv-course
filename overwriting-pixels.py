@@ -18,5 +18,14 @@ image = cv2.imread(cwd + '/images/psp.jpg')
 (cX, cY) = (iW // 2, iH // 2)
 
 # overwrite bottom right corner and turn it all black
+image[cY:iH, cX:iW] = 0
+local_cv2_imshow("Image with blacked out bottom right corner", image)
 
-local_cv2_imshow("Image with blacked out bottom right corner", edited_image)
+# overwrite bottom right corner and turn it all red
+image[cY:iH, cX:iW] = [0, 0, 255]
+local_cv2_imshow("Image with blacked out bottom right corner", image)
+
+# freestyle :)
+image[cY:iH, cX:iW] = [45, 54, 34]
+image[0:cY, 0:cX] = [255,23,43]
+local_cv2_imshow("Image with blacked out bottom right corner", image)
