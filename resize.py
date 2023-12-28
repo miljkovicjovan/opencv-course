@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 #get current working directory for faster traversal in files
 import os
